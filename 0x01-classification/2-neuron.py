@@ -25,6 +25,6 @@ class Neuron(object):
 
 #Generally: a = sigmoid(np.dot(w, a)+b)
     def forward_prop(self, X): 
-    	z= np.matmul(self.__W, X)+ self.b #np.dot(w, a)+b:// and they asked us to use ("matmul")					
+    	z= np.matmul(self.__W, X)+ self.__b #np.dot(w, a)+b:// and they asked us to use ("matmul")					
     	self.__A = 1.0/(1.0+np.exp(-z)) #The sigmoid function.
     	return self.__A
