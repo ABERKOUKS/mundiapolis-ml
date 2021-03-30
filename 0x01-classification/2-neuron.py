@@ -7,7 +7,7 @@ class Neuron(object):
   	elif nx < 1:
             raise ValueError('nx must be a positive integer')
 	    
-	self.__W = np.random.normal(0, 1, (1, nx))
+	self.__W = np.random.randn(nx).reshape(1, nx)
         self.__b = 0 # (__ to make it private)
         self.__A = 0
 
