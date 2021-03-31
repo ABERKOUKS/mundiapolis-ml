@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 class Neuron(object):
-    def__init__(self, nx):
+    def __init__(self, nx):
         if not type(nx) is int:
   	    raise TypeError("nx must be an integer")
   	if nx < 1:
