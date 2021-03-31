@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 class Neuron(object):
-    def__init__(self, nx):
+    def __init__(self, nx):
         if not type(nx) is int:
             raise TypeError("nx must be an integer")
   	if nx < 1:
@@ -12,7 +12,7 @@ class Neuron(object):
     
     @property
     def get_W(self):
-        return self.__W #(Onlu getter of each attribute)
+        return self.__W #(Only getter of each attribute)
     @property
     def get_b(self):
 	return self.__b
