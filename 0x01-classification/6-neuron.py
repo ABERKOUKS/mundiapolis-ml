@@ -49,7 +49,7 @@ class Neuron(object):
     
     #A, cost = neuron.train(X_train, Y_train, iterations=10)
     def train(self, X, Y, iterations=5000, alpha=0.05):
-        if not iterations.is_integer():
+        if not type(iterations) is int:
             raise TypeError("iterations must be an integer")
         if iterations < 0:
             raise ValueError("iterations must be a positive integer")
