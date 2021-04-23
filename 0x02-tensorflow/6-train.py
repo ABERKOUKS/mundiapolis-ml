@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
-"""
-Module that builds, trains and saves a neural network classifier
-"""
+
 import tensorflow as tf
 calculate_accuracy = __import__('3-calculate_accuracy').calculate_accuracy
 calculate_loss = __import__('4-calculate_loss').calculate_loss
@@ -12,19 +10,7 @@ forward_prop = __import__('2-forward_prop').forward_prop
 
 def train(X_train, Y_train, X_valid, Y_valid, layer_sizes, activations,
           alpha, iterations, save_path="/tmp/model.ckpt"):
-    """
-    a function builds, trains and saves a neural network classifier
-    :param X_train: a numpy.ndarray containing the training input data
-    :param Y_train: a numpy.ndarray containing the training labels
-    :param X_valid: a numpy.ndarray containing the training input data
-    :param Y_valid: a numpy.ndarray containing the training labels
-    :param layer_sizes: list containing the number of nodes in each layer
-    :param activations: list containing the activation functions of each layer
-    :param alpha: the learning rate
-    :param iterations: the number of iterations to train over
-    :param save_path: designates where to save the model
-    :return: an operation that trains the network using gradient descent
-    """
+
     x, y = create_placeholders(X_train.shape[1], Y_train.shape[1])
     tf.add_to_collection("x", x)
     tf.add_to_collection("y", y)
